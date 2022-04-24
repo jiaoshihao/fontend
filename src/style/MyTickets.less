@@ -1,0 +1,93 @@
+
+#Content {
+  background-color: #ffffff;
+  height: 100vh;
+  position: relative;
+  overflow: auto;
+}
+#Brand {
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  left: 100px;
+}
+#BrandImg {
+  width: 100px;
+  height: 100px;
+}
+.ticket-list{
+  overflow: auto;
+  width: 500px;
+  margin: 0 auto;
+}
+.ticket-item-container {
+  margin: 0 auto;
+  font-size: 16px;
+}
+.ticket-item {
+  border: 2px solid rgb(209, 212, 213);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.ticket-head {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  font-weight: 500;
+}
+.ticket-member {
+  padding: 20px 0;
+  font-size: 14px;
+}
+.ticket-item .el-collapse-item__header{
+  background: rgb(242, 244, 244);
+  border: 1px solid transparent;
+}
+.cus-collapse-head {
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.ticket-item .el-collapse-item__header.is-active {
+  border-color: rgb(37, 24, 170);
+}
+.ticket-item .el-collapse-item__content {
+  padding: 0;
+}
+.ticket-steps {
+  height: 150px;
+  padding: 20px 0;
+}
+.ticket-steps .el-step.is-vertical .el-step__line {
+  width: 4px;
+  background-color: rgb(37, 24, 170);
+  left: 10px;
+}
+.ticket-steps .el-step__icon {
+  border-color: rgb(37, 24, 170);
+}
+.ticket-steps .el-step__title.is-finish {
+  color: #000 !important;
+  font-weight: bold;
+}
+.ticket-steps {
+  .el-step__description.is-finish {
+    color: #000;
+    ul {
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      li {
+        &:nth-child(1) {
+          color: rgb(71, 81, 84);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
