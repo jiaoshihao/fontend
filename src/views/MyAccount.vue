@@ -15,23 +15,17 @@
           <el-tabs tab-position="left">
             <el-tab-pane label="Account overview">
               <div class="user-info-item">
-                <h2>info</h2>
+                <h2>Account</h2>
                 <div class="user-info-item-panel">
-                  <el-descriptions :column="2">
-                    <el-descriptions-item label="用户名">
-                      kooriookami
+                  <el-descriptions :column="1">
+                    <el-descriptions-item label="Name">
+                      {{ name }}
                     </el-descriptions-item>
-                    <el-descriptions-item label="手机号">
-                      18100000000
+                    <el-descriptions-item label="Phone">
+                      {{ phone }}
                     </el-descriptions-item>
-                    <el-descriptions-item label="居住地">
-                      苏州市
-                    </el-descriptions-item>
-                    <el-descriptions-item label="备注">
-                      <el-tag size="small">学校</el-tag>
-                    </el-descriptions-item>
-                    <el-descriptions-item label="联系地址">
-                      江苏省苏州市吴中区吴中大道 1188 号
+                    <el-descriptions-item label="Email">
+                      {{ email }}
                     </el-descriptions-item>
                   </el-descriptions>
                 </div>
@@ -39,27 +33,32 @@
             </el-tab-pane>
             <el-tab-pane label="Payment methods">
               <div class="user-info-item">
-                <h2>已保存的付款方式</h2>
+                <h2>Saved payment methods</h2>
                 <div class="user-info-item-panel">
                   <div class="icon">
                     <img src="../assets/visa.png" alt="" />
                   </div>
                   <div class="desc">
-                    <h4>3055签证<span>3055签证</span></h4>
+                    <h4>
+                      {{ payment.cardType }} {{ payment.cardNumber
+                      }}<span
+                        >{{ payment.cardType }} {{ payment.cardNumber }}</span
+                      >
+                    </h4>
                     <div class="desc-list">
                       <div>
-                        <p>持卡人</p>
-                        <p>zhangqi</p>
+                        <p>Card Holder</p>
+                        <p>{{ payment.cardHolder }}</p>
                       </div>
                       <div>
-                        <p>过期</p>
-                        <p>06/22</p>
+                        <p>Expires</p>
+                        <p>{{ payment.expires }}</p>
                       </div>
                       <div></div>
                     </div>
                     <div class="del">
                       <el-link type="danger"
-                        >删除卡 <i class="el-icon-delete"></i>
+                        >Delete card <i class="el-icon-delete"></i>
                       </el-link>
                     </div>
                   </div>
@@ -79,10 +78,11 @@ export default {
     return {
       name: "zzzq",
       email: "zqzq@gmail.com",
+      phone: "18100000000",
       payment: {
         cardType: "visa",
         cardNumber: "3055",
-        cardHolder: "zzzq",
+        cardHolder: "Qi Zhang",
         expires: "05/22",
       },
     };
