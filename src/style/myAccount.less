@@ -19,9 +19,72 @@
   left: 200px;
   width: 500px;
 }
-.Info{
-  font-size: large;
-  top: 300px;
-  left: 200px;
-  width: 500px;
+.user-info-container {
+  overflow: auto;
+  width: 100vw;
+  height: 100vh;
+  background: #f0f2f1;
+  .Info{
+    overflow: auto;
+  }
+  .user-info-content {
+    padding-top: 170px;
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .user-info-list {
+    margin-top: 70px;
+  }
+  .user-info-item {
+    padding: 0 10px 10px 10px;
+    h2 {
+      margin: 0;
+    }
+  }
+  .user-info-item-panel {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+    display: flex;
+    padding: 20px;
+    overflow: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 400px;
+    .icon {
+      img {
+        width: 60px;
+      }
+    }
+    .desc {
+      margin-left: 20px;
+      flex: 1;
+      h4 span {
+        font-size: 14px;
+        color: #aaa;
+        font-weight: normal;
+        display: block;
+        margin-top: 5px;
+      }
+    }
+    .desc-list {
+      margin-top: 16px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      p {
+        line-height: 20px;
+        &:nth-child(1) {
+          font-size: 14px;
+          color: #303133;
+        }
+        &:nth-child(2) {
+          font-size: 16px;
+          color: #909399;
+        }
+      }
+    }
+    .del {
+      margin-top: 16px;
+    }
+  }
 }
